@@ -22,6 +22,7 @@
     top: 0;
     height: 100%;
     background-color: var(--main-color);
+    z-index: 100;
 }
 
 .sidebar-brand{
@@ -67,13 +68,25 @@
 
 header{
      display: flex;
+     background: #fff;
      justify-content: space-between;
-     padding: 1rem;
+     padding: 1rem 1.5rem;
      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+     position: fixed;
+     left: 345px;
+     width: calc(100% - 255px);
+     top: 0;
+     z-index: 100;
+     margin-left: -90px;
 }
 
 header h2 {
     color: #222;
+}
+
+header label span {
+    font-size: 1.7em;
+    padding-right: 1rem;
 }
 
 .search-wrapper{
@@ -112,4 +125,36 @@ header h2 {
     display: inline-block;
 }
 
+.cards {
+    margin-top: 120px;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    min-height: calc(100vh - 96px);
 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 6rem;
+}
+
+.card-single {
+    display: flex;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 2rem;
+    border-radius: 2px;
+    height: 130px;
+    margin: 6px
+}
+
+.card-single h1 {
+    color: #fff;
+} 
+
+.card-single span:first-child {
+    font-size: 3rem;
+    color: var(--gray)
+}
+
+.card-single span:last-child {
+    color: #fff;
+}
