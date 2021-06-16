@@ -155,6 +155,3 @@ header label span {
     color: var(--gray)
 }
 
-.card-single span:last-child {
-    color: #fff;
-}
